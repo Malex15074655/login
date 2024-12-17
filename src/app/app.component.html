@@ -1,13 +1,28 @@
-
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="app.component.css">
+</head>
+<body>
+  <div class="login-container">
+      <div class="login-box">
+          <h2>Iniciar sesión</h2>
 <form (ngSubmit)= "onLogin()">
   <div>
     <label for="usuario">Usuario:</label>
-    <input type="text" id="usuario" [(ngModel)]="usuario" name="usuario" required>
+    <input type="text" id="usuario" [(ngModel)] = "usuario" name="usuario" placeholder="Usuario" required>
   </div>
   <div>
-    <label for="contrasenna">Contraseña:</label>
-    <input type="password" id="contrasenna" [(ngModel)]="contrasenna" name="contrasenna" required>
+    <label for="contrasenna">Contrase&ntilde;a:</label>
+    <input type="password" id="contrasenna" [(ngModel)] = "contrasenna" name="contrasenna" placeholder="Contrase&ntilde;a"  required>
   </div>
   <button type="submit">Iniciar sesión</button>
 </form>
 <p *ngIf="errorMessage">{{ errorMessage }}</p>
+</div>
+</div>
+</body>
+</html>
